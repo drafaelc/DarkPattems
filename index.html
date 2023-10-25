@@ -36,7 +36,7 @@
         >
         <a class="btn btn-danger" href="#signup">Registrarse</a>
       </div>
-      <div class="controls">
+      <div class="controls px-3">
         <label for="radioDark">Dark</label>
         <input type="radio" name="theme" id="radioDark" value="dark">
         <label for="radioLight">Light</label>
@@ -318,9 +318,49 @@
                   placeholder="Escribe tu cuenta bancaria"
                 ></textarea>
               </div>
-              <button type="botton" class="btn btn-danger btn-lg mt-3">
-                Enviar
-              </button>
+              <button
+                    type="button"
+                    class="btn btn-lg btn-danger mt-3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#enviar"
+                  >
+                    Enviar
+                  </button>
+
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="enviar"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">
+                            Pago Aceptado
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body text-dark">Transacción Satisfactoria!!!</div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </form>
             <form
               class="form-subscribe mt-5"
@@ -354,12 +394,48 @@
                 </div>
                 <div class="col-auto">
                   <button
-                    class="btn btn-danger btn-lg disabled"
-                    id="submitButton"
-                    type="submit"
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
                   >
                     Darse de baja
                   </button>
+
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">
+                            Confirmar Baja!
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body px-4 text-dark">Hola!, Hemos notado que has decidido darte de baja, y aunque respetamos tu decisión, no podemos evitar sentir un poco de tristeza al ver partir a un miembro valioso como tú que dejará de apoyar al planeta y el cuidado de las plantas.<strong> No nos dejes, vuelve pronto!!!</strong> </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- Submit success message-->
